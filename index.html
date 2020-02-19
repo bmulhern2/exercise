@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    } html {
+        text-align: center;
+    } header {
+        background-color: blue;
+        color: white;
+    };
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<body>
+    <header>
+        <h1>Exercise</h1>
+    </header>
+    <div id="output"></div>
+    <div id="output2"></div>
+    <script>
+    var output = $('#output');
+        output.css('margin-top', '10vh');
+        output.html('<h1 id="pushups">Push-Ups</h1><br><h2 id="pushupnumber">10</h2><br><h1 id="situps">Sit-Ups</h1><br><h2 id="situpnumber">20</h2><br><h1 id="chinups">Chin-Ups</h1><br><h2 id="chinupnumber">2</h2>');
+    var pushups = $('#pushups');
+    var pushupnumber = $('#pushupnumber');
+        pushupnumber.css('color', 'white');
+        pushups.css('color', 'blue');
+        pushups.on('click', function() {
+            pushupnumber.hide();
+        });
+        var situps = $('#situps');
+    situps.css('color', 'blue');
+    var situpnumber = $('#situpnumber')
+    situpnumber.css('color', 'white');
+    situps.on('click', function() {
+            situpnumber.hide();
+        });
+        var chinups = $('#chinups');
+    chinups.css('color', 'blue');
+    var chinupnumber = $('#chinupnumber')
+    chinupnumber.css('color', 'white');
+    chinups.on('click', function() {
+            chinupnumber.hide();
+        });
+    $('html').css('background-color', 'black');
+    $('#output2').html('<button id="reset">Reset</button>')
+    $('#reset').css('margin-top', '10vh');
+    $('#reset').on('click', function() {
+        pushupnumber.show();
+        chinupnumber.show();
+        situpnumber.show();
+    })
+    </script>
+</body>
+</html>
